@@ -1,4 +1,4 @@
-"""dbtArtifacts tap class."""
+"""DbtArtifacts tap class."""
 
 from typing import List
 
@@ -6,12 +6,13 @@ from singer_sdk import Tap, Stream
 from singer_sdk import typing as th  # JSON schema typing helpers
 
 from tap_dbt_artifacts.streams import (
-    DbtArtifactsStream,
     ManifestStream,
+    RunResultsStream,
 )
 
 STREAM_TYPES = [
     ManifestStream,
+    RunResultsStream,
 ]
 
 

@@ -1,0 +1,216 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "metadata": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "dbt_schema_version": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "dbt_version": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "generated_at": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "invocation_id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "results": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "timing": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "started_at": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "completed_at": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            }
+          },
+          "thread_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "execution_time": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "adapter_response": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "_message": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "code": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "rows_affected": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "bytes_processed": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              }
+            }
+          },
+          "message": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "unique_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      }
+    },
+    "elapsed_time": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "args": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "log_format": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "write_json": {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        "profiles_dir": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "use_cache": {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        "version_check": {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        "models": {
+          "type": [
+            "null",
+            "array"
+          ],
+          "items": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "which": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "rpc_method": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    }
+  }
+}
