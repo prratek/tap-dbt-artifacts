@@ -3,7 +3,7 @@
 from typing import List
 
 from singer_sdk import Tap, Stream
-from singer_sdk import typing as th  # JSON schema typing helpers
+from singer_sdk import typing as th
 
 from tap_dbt_artifacts.streams import (
     ManifestStream,
@@ -17,7 +17,7 @@ STREAM_TYPES = [
 
 
 class TapDbtArtifacts(Tap):
-    """dbtArtifacts tap class."""
+    """DbtArtifacts tap class."""
     name = "tap-dbt-artifacts"
 
     config_jsonschema = th.PropertiesList(
