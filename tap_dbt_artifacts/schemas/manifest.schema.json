@@ -1,0 +1,1406 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "metadata": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "dbt_schema_version": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "dbt_version": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "generated_at": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "invocation_id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "project_id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "user_id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "send_anonymous_usage_stats": {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        "adapter_type": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "nodes": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "raw_sql": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resource_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "depends_on": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "macros": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "nodes": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            }
+          },
+          "config": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "enabled": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "materialized": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "persist_docs": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "relation": {
+                    "type": [
+                      "null",
+                      "boolean"
+                    ]
+                  }
+                }
+              },
+              "alias": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "schema": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "database": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "full_refresh": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "cluster_by": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "partition_by": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "field": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "data_type": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "range": {
+                    "type": [
+                      "null",
+                      "object"
+                    ],
+                    "properties": {
+                      "start": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "end": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "interval": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "partitions": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "incremental_strategy": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "tags": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "unique_key": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "metrialized": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "strategy": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "target_schema": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "target_database": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "updated_at": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "check_cols": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "quote_columns": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "severity": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            }
+          },
+          "database": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "schema": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "fqn": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "unique_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "package_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "root_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "original_file_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "alias": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "checksum": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "checksum": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            }
+          },
+          "sources": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "source": {
+                  "type": [
+                    "null",
+                    "array"
+                  ],
+                  "items": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "columns": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "description": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "data_type": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "quote": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                }
+              }
+            }
+          },
+          "docs": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "show": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              }
+            }
+          },
+          "patch_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "build_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "deferred": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "unrendered_config": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "materialized": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "persist_docs": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "relation": {
+                    "type": [
+                      "null",
+                      "boolean"
+                    ]
+                  }
+                }
+              },
+              "partition_by": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "field": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "data_type": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "range": {
+                    "type": [
+                      "null",
+                      "object"
+                    ],
+                    "properties": {
+                      "start": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "end": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "interval": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "cluster_by": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "incremental_strategy": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "partitions": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "schema": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "tags": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "unique_key": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "metrialized": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "target_schema": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "strategy": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "check_cols": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "severity": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            }
+          },
+          "refs": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "ref": {
+                  "type": [
+                    "null",
+                    "array"
+                  ],
+                  "items": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "tags": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "compiled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "compiled_sql": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "extra_ctes_injected": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "relation_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "test_metadata": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "kwargs": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "column_name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "model": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "values": {
+                    "type": [
+                      "null",
+                      "array"
+                    ],
+                    "items": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  },
+                  "quote": {
+                    "type": [
+                      "null",
+                      "boolean"
+                    ]
+                  },
+                  "combination_of_columns": {
+                    "type": [
+                      "null",
+                      "array"
+                    ],
+                    "items": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  },
+                  "expression": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "where": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "to": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "field": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "lower_bound_column": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "upper_bound_column": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "partition_by": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "gaps": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "compare_model": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
+              },
+              "namespace": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            }
+          },
+          "column_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "fqn": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "database": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "schema": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "unique_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "package_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "root_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "original_file_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "source_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "source_description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "loader": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "identifier": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resource_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "quoting": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "database": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "schema": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "identifier": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "column": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              }
+            }
+          },
+          "loaded_at_field": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "freshness": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "warn_after": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "count": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ]
+                  }
+                }
+              },
+              "error_after": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "count": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ]
+                  }
+                }
+              },
+              "filter": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            }
+          },
+          "external": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "location": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "file_format": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "row_format": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "tbl_properties": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "partitions": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "description": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "data_type": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "meta": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "config": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "enabled": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              }
+            }
+          },
+          "patch_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "relation_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      }
+    },
+    "macros": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "unique_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "package_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "root_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "original_file_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "macro_sql": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resource_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "docs": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "show": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              }
+            }
+          },
+          "patch_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "depends_on": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "macros": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            }
+          },
+          "arguments": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "type": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "description": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "docs": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "unique_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "package_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "root_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "original_file_path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "block_contents": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      }
+    },
+    "parent_map": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "node": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "parents": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "child_map": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "node": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "parents": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
