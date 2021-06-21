@@ -9,12 +9,14 @@ from tap_dbt_artifacts.streams import (
     CatalogStream,
     ManifestStream,
     RunResultsStream,
+    SourcesStream,
 )
 
 STREAM_TYPES = [
-    CatalogStream,
-    ManifestStream,
-    RunResultsStream,
+    # CatalogStream,
+    # ManifestStream,
+    # RunResultsStream,
+    SourcesStream,
 ]
 
 

@@ -100,3 +100,14 @@ class RunResultsStream(DbtArtifactsStream):
 
     def process_record(self, record: dict) -> dict:
         return record
+
+
+class SourcesStream(DbtArtifactsStream):
+    """Stream for manifest.json"""
+    name = "sources"
+    primary_keys = ["id"]
+    replication_key = None
+    schema_filepath = SCHEMAS_DIR / "sources.schema.json"
+
+    def process_record(self, record: dict) -> dict:
+        return record

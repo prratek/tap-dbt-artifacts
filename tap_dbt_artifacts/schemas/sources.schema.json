@@ -1,0 +1,144 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "metadata": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "dbt_schema_version": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "dbt_version": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "generated_at": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "invocation_id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "results": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "unique_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "max_loaded_at": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "snapshotted_at": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "max_loaded_at_time_ago_in_s": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "criteria": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "warn_after": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "count": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ]
+                  },
+                  "period": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
+              },
+              "error_after": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "count": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ]
+                  },
+                  "period": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
+              },
+              "filter": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "elapsed_time": {
+      "type": [
+        "null",
+        "number"
+      ]
+    }
+  }
+}
