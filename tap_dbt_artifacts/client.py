@@ -2,8 +2,7 @@
 
 import abc
 import json
-from pathlib import Path
-from typing import Any, Dict, Optional, Union, List, Iterable
+from typing import Optional, Iterable
 
 from singer_sdk.streams import Stream
 
