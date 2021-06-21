@@ -1,13 +1,13 @@
 """Tests standard tap features using the built-in SDK tests library."""
 
-import datetime
+import os
 
 from singer_sdk.testing import get_standard_tap_tests
 
 from tap_dbt_artifacts.tap import TapDbtArtifacts
 
 SAMPLE_CONFIG = {
-    "dbt_target_dir": "/Users/pramchandani/projects/airflow/dbt/target"
+    "dbt_target_dir": os.environ.get("DBT_TARGET_DIR")
 }
 
 
