@@ -6,11 +6,13 @@ from singer_sdk import Tap, Stream
 from singer_sdk import typing as th
 
 from tap_dbt_artifacts.streams import (
+    CatalogStream,
     ManifestStream,
     RunResultsStream,
 )
 
 STREAM_TYPES = [
+    CatalogStream,
     ManifestStream,
     RunResultsStream,
 ]

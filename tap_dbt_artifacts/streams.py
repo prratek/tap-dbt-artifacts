@@ -9,6 +9,30 @@ from tap_dbt_artifacts.client import DbtArtifactsStream
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
 
+class CatalogStream(DbtArtifactsStream):
+    """Stream for manifest.json"""
+    name = "catalog"
+    primary_keys = ["id"]
+    replication_key = None
+    schema_filepath = SCHEMAS_DIR / "catalog.schema.json"
+
+    @staticmethod
+    def _listify_columns(node: dict) -> dict:
+        if node.get("columns"):
+            node["columns"] = [node["columns"][col] for col in node["columns"]]
+        return node
+
+    def process_record(self, record: dict) -> dict:
+        fields_to_listify = ["nodes", "sources"]
+
+        for field in fields_to_listify:
+            record[field] = [self._listify_columns(record[field][entry]) for entry in record[field]]
+            if field == "nodes":
+                record[field] = [entry for entry in record[field]]
+
+        return record
+
+
 class ManifestStream(DbtArtifactsStream):
     """Stream for manifest.json"""
     name = "manifest"
