@@ -9,6 +9,11 @@ from tap_dbt_artifacts.client import DbtArtifactsStream
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
 
+def create_id_col(record: dict, col_name: str = "id") -> dict:
+    record[col_name] = record["metadata"]["invocation_id"]
+    return record
+
+
 class CatalogStream(DbtArtifactsStream):
     """Stream for manifest.json"""
     name = "catalog"
@@ -24,6 +29,7 @@ class CatalogStream(DbtArtifactsStream):
 
     def process_record(self, record: dict) -> dict:
         fields_to_listify = ["nodes", "sources"]
+        record = create_id_col(record)
 
         for field in fields_to_listify:
             record[field] = [self._listify_columns(record[field][entry]) for entry in record[field]]
@@ -74,6 +80,7 @@ class ManifestStream(DbtArtifactsStream):
     def process_record(self, record: dict) -> dict:
         fields_to_listify = ["nodes", "sources", "macros", "docs", "exposures", "selectors"]
         parent_child_fields = ["parent_map", "child_map"]
+        record = create_id_col(record)
 
         for field in fields_to_listify:
             record[field] = [self._listify_columns(record[field][entry]) for entry in record[field]]
@@ -98,7 +105,14 @@ class RunResultsStream(DbtArtifactsStream):
     replication_key = None
     schema_filepath = SCHEMAS_DIR / "run-results.schema.json"
 
+    @staticmethod
+    def _stringify_message(result: dict) -> dict:
+        result["message"] = str(result["message"])
+        return result
+
     def process_record(self, record: dict) -> dict:
+        record = create_id_col(record)
+        record["results"] = []
         return record
 
 
@@ -110,4 +124,5 @@ class SourcesStream(DbtArtifactsStream):
     schema_filepath = SCHEMAS_DIR / "sources.schema.json"
 
     def process_record(self, record: dict) -> dict:
+        record = create_id_col(record)
         return record

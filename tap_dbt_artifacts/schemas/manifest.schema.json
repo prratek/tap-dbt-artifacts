@@ -4,6 +4,11 @@
     "object"
   ],
   "properties": {
+    "id": {
+      "type": [
+        "string"
+      ]
+    },
     "metadata": {
       "type": [
         "null",
