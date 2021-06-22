@@ -179,6 +179,12 @@
             "string"
           ]
         },
+        "vars": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
         "use_cache": {
           "type": [
             "null",
