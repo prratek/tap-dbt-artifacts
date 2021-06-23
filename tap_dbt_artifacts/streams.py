@@ -112,7 +112,7 @@ class RunResultsStream(DbtArtifactsStream):
 
     def process_record(self, record: dict) -> dict:
         record = create_id_col(record)
-        record["results"] = []
+        record["results"] = [self._stringify_message(result) for result in record["results"]]
         return record
 
 
