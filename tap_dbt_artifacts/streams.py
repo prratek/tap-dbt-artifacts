@@ -89,6 +89,8 @@ class ManifestStream(DbtArtifactsStream):
                     self._stringify_accepted_values(self._listify_cluster_by(self._wrap_node_nested_arrays(entry)))
                     for entry in record[field]
                 ]
+            elif field == "exposures":
+                record[field] = [self._wrap_node_nested_arrays(entry) for entry in record[field]]
 
         for field in parent_child_fields:
             record[field] = [

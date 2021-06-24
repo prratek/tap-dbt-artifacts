@@ -1474,13 +1474,21 @@
             "items": {
               "type": [
                 "null",
-                "array"
+                "object"
               ],
-              "items": {
-                "type": [
-                  "null",
-                  "string"
-                ]
+              "properties": {
+                "ref": {
+                  "type": [
+                    "null",
+                    "array"
+                  ],
+                  "items": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
               }
             }
           }
