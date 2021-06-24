@@ -270,12 +270,6 @@
                   "string"
                 ]
               },
-              "metrialized": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
               "strategy": {
                 "type": [
                   "null",
