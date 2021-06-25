@@ -1,7 +1,5 @@
 """Tests standard tap features using the built-in SDK tests library."""
 
-import os
-
 from singer_sdk.helpers._util import read_json_file
 from singer_sdk.tap_base import Tap
 from singer_sdk.testing import get_standard_tap_tests
