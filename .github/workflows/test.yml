@@ -1,0 +1,49 @@
+name: test
+
+
+on:
+  push:
+    paths-ignore: [ '**.md' ]
+
+
+jobs:
+  build_and_test:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python_version: [ 3.7, 3.8, 3.9 ]
+
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install pipx and Poetry
+        run: |
+          python3 -m pip install pipx
+          python3 -m pipx ensurepath
+          pipx install poetry
+
+      - name: Install Tap
+        run: poetry install
+
+      - name: Install dbt 0.19.1
+        run: pip install dbt==0.19.1
+
+      - name: Clone Jaffle Shop
+        run: git clone https://github.com/fishtown-analytics/jaffle_shop.git
+
+      - name: Run Tests
+        env:
+          TAP_STRIPE_API_KEY: ${{ secrets.TAP_STRIPE_API_KEY }}
+        run: |
+          cd jaffle_shop
+          dbt deps
+          dbt seed
+          dbt run
+          poetry run pytest
