@@ -43,7 +43,7 @@ jobs:
           TAP_STRIPE_API_KEY: ${{ secrets.TAP_STRIPE_API_KEY }}
         run: |
           cd jaffle_shop
-          dbt deps
+          dbt debug
           dbt seed
           dbt run
           poetry run pytest

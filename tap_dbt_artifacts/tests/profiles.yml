@@ -1,0 +1,15 @@
+config:
+    send_anonymous_usage_stats: False
+    use_colors: True
+
+integration_tests:
+  target: bigquery
+  outputs:
+
+     bigquery:
+       type: bigquery
+       method: service-account
+       keyfile: "{{ env_var('GCLOUD_SERVICE_KEY_PATH') }}"
+       project: "{{ env_var('BIGQUERY_PROJECT_ID') }}"
+       schema: tap_dbt_artifacts_tests
+       threads: 1
