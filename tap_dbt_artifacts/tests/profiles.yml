@@ -8,8 +8,20 @@ jaffle_shop:
 
      bigquery:
        type: bigquery
-       method: service-account
-       keyfile: "{{ env_var('GCLOUD_SERVICE_KEY_PATH') }}"
-       project: "{{ env_var('BIGQUERY_PROJECT_ID') }}"
-       schema: tap_dbt_artifacts_tests
+       method: service-account-json
+       project: "{{ env_var('CI_BIGQUERY_KEYFILE_PROJECT_ID') }}"
+       dataset: tap_dbt_artifacts_tests
        threads: 1
+
+       # These fields come from the service account json keyfile
+       keyfile_json:
+         type: "{{ env_var('CI_BIGQUERY_KEYFILE_TYPE') }}"
+         project_id: "{{ env_var('CI_BIGQUERY_KEYFILE_PROJECT_ID') }}"
+         private_key_id: "{{ env_var('CI_BIGQUERY_KEYFILE_PRIVATE_KEY_ID') }}"
+         private_key: "{{ env_var('CI_BIGQUERY_KEYFILE_PRIVATE_KEY') }}"
+         client_email: "{{ env_var('CI_BIGQUERY_KEYFILE_CLIENT_EMAIL') }}"
+         client_id: "{{ env_var('CI_BIGQUERY_KEYFILE_CLIENT_ID') }}"
+         auth_uri: "{{ env_var('CI_BIGQUERY_KEYFILE_AUTH_URI') }}"
+         token_uri: "{{ env_var('CI_BIGQUERY_KEYFILE_TOKEN_URI') }}"
+         auth_provider_x509_cert_url: "{{ env_var('CI_BIGQUERY_KEYFILE_AUTH_PROVIDER_CERT_URL') }}"
+         client_x509_cert_url: "{{ env_var('CI_BIGQUERY_KEYFILE_CLIENT_CERT_URL') }}"

@@ -41,6 +41,17 @@ jobs:
       - name: Run Tests
         env:
           DBT_PROFILES_DIR: /home/runner/work/tap-dbt-artifacts/tap-dbt-artifacts/tap_dbt_artifacts/tests
+          CI_BIGQUERY_KEYFILE_TYPE: ${{ secrets.CI_BIGQUERY_KEYFILE_TYPE }}
+          CI_BIGQUERY_KEYFILE_PROJECT_ID: ${{ secrets.CI_BIGQUERY_KEYFILE_PROJECT_ID }}
+          CI_BIGQUERY_KEYFILE_PRIVATE_KEY_ID: ${{ secrets.CI_BIGQUERY_KEYFILE_PRIVATE_KEY_ID }}
+          CI_BIGQUERY_KEYFILE_PRIVATE_KEY: ${{ secrets.CI_BIGQUERY_KEYFILE_PRIVATE_KEY }}
+          CI_BIGQUERY_KEYFILE_CLIENT_EMAIL: ${{ secrets.CI_BIGQUERY_KEYFILE_CLIENT_EMAIL }}
+          CI_BIGQUERY_KEYFILE_CLIENT_ID: ${{ secrets.CI_BIGQUERY_KEYFILE_CLIENT_ID }}
+          CI_BIGQUERY_KEYFILE_AUTH_URI: ${{ secrets.CI_BIGQUERY_KEYFILE_AUTH_URI }}
+          CI_BIGQUERY_KEYFILE_TOKEN_URI: ${{ secrets.CI_BIGQUERY_KEYFILE_TOKEN_URI }}
+          CI_BIGQUERY_KEYFILE_AUTH_PROVIDER_CERT_URL: ${{ secrets.CI_BIGQUERY_KEYFILE_AUTH_PROVIDER_CERT_URL }}
+          CI_BIGQUERY_KEYFILE_CLIENT_CERT_URL: ${{ secrets.CI_BIGQUERY_KEYFILE_CLIENT_CERT_URL }}
+
         run: |
           cd jaffle_shop
           dbt debug
