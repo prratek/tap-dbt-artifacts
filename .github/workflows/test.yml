@@ -39,11 +39,9 @@ jobs:
         run: git clone https://github.com/fishtown-analytics/jaffle_shop.git
 
       - name: Run Tests
-        env:
-          TAP_STRIPE_API_KEY: ${{ secrets.TAP_STRIPE_API_KEY }}
         run: |
           cd jaffle_shop
           dbt debug
           dbt seed
-          dbt run
+          dbt run --profiles-dir ~/work/tap-dbt-artifacts/tap-dbt-artifacts/tap_dbt_artifacts/tests/profiles.yml
           poetry run pytest
