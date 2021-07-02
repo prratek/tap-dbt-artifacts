@@ -40,7 +40,7 @@ jobs:
 
       - name: Run Tests
         env:
-          DBT_PROFILES_DIR: /home/runner/work/tap-dbt-artifacts/tap-dbt-artifacts/tap_dbt_artifacts/tests/profiles.yml
+          DBT_PROFILES_DIR: /home/runner/work/tap-dbt-artifacts/tap-dbt-artifacts/tap_dbt_artifacts/tests
         run: |
           cd jaffle_shop
           dbt debug
