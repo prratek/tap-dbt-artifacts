@@ -1,12 +1,19 @@
 """Tests standard tap features using the built-in SDK tests library."""
 
+from pathlib import Path
+
 from singer_sdk.helpers._util import read_json_file
 from singer_sdk.tap_base import Tap
 from singer_sdk.testing import get_standard_tap_tests
 
 from tap_dbt_artifacts.tap import TapDbtArtifacts
 
-SAMPLE_CONFIG = read_json_file(".secrets/config.json")
+if Path(".secrets/config.json").exists():
+    SAMPLE_CONFIG = read_json_file(".secrets/config.json")
+else:
+    SAMPLE_CONFIG = {
+        "dbt_target_dir": "/home/runner/work/tap-dbt-artifacts/tap-dbt-artifacts/jaffle_shop/target"
+    }
 
 
 # Run standard built-in tap tests from the SDK:

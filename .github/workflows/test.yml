@@ -1,0 +1,65 @@
+name: test
+
+
+on:
+  push:
+    paths-ignore: [ '**.md' ]
+
+
+jobs:
+  build_and_test:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python_version: [ 3.7, 3.8, 3.9 ]
+
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install pipx and Poetry
+        run: |
+          python3 -m pip install pipx
+          python3 -m pipx ensurepath
+          pipx install poetry
+
+      - name: Install Tap
+        run: poetry install
+
+      - name: Install dbt 0.19.1
+        run: pip install dbt==0.19.1
+
+      - name: Clone Jaffle Shop
+        run: git clone https://github.com/prratek/jaffle_shop.git
+
+      - name: Run Jaffle Shop
+        env:
+          DBT_PROFILES_DIR: /home/runner/work/tap-dbt-artifacts/tap-dbt-artifacts/tap_dbt_artifacts/tests
+          CI_BIGQUERY_KEYFILE_TYPE: ${{ secrets.CI_BIGQUERY_KEYFILE_TYPE }}
+          CI_BIGQUERY_KEYFILE_PROJECT_ID: ${{ secrets.CI_BIGQUERY_KEYFILE_PROJECT_ID }}
+          CI_BIGQUERY_KEYFILE_PRIVATE_KEY_ID: ${{ secrets.CI_BIGQUERY_KEYFILE_PRIVATE_KEY_ID }}
+          CI_BIGQUERY_KEYFILE_PRIVATE_KEY: ${{ secrets.CI_BIGQUERY_KEYFILE_PRIVATE_KEY }}
+          CI_BIGQUERY_KEYFILE_CLIENT_EMAIL: ${{ secrets.CI_BIGQUERY_KEYFILE_CLIENT_EMAIL }}
+          CI_BIGQUERY_KEYFILE_CLIENT_ID: ${{ secrets.CI_BIGQUERY_KEYFILE_CLIENT_ID }}
+          CI_BIGQUERY_KEYFILE_AUTH_URI: ${{ secrets.CI_BIGQUERY_KEYFILE_AUTH_URI }}
+          CI_BIGQUERY_KEYFILE_TOKEN_URI: ${{ secrets.CI_BIGQUERY_KEYFILE_TOKEN_URI }}
+          CI_BIGQUERY_KEYFILE_AUTH_PROVIDER_CERT_URL: ${{ secrets.CI_BIGQUERY_KEYFILE_AUTH_PROVIDER_CERT_URL }}
+          CI_BIGQUERY_KEYFILE_CLIENT_CERT_URL: ${{ secrets.CI_BIGQUERY_KEYFILE_CLIENT_CERT_URL }}
+
+        run: |
+          cd jaffle_shop
+          dbt debug
+          dbt seed
+          dbt docs generate
+          dbt run
+          dbt source snapshot-freshness
+
+      - name: Run Tests
+        run: poetry run pytest
