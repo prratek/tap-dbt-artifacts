@@ -37,7 +37,7 @@ jobs:
         run: pip install dbt==0.19.1
 
       - name: Clone Jaffle Shop
-        run: git clone https://github.com/fishtown-analytics/jaffle_shop.git
+        run: git clone https://github.com/prratek/jaffle_shop.git
 
       - name: Run Jaffle Shop
         env:
@@ -59,6 +59,7 @@ jobs:
           dbt seed
           dbt docs generate
           dbt run
+          dbt source snapshot-freshness
 
       - name: Run Tests
         run: poetry run pytest
