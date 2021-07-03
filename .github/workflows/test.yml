@@ -39,7 +39,7 @@ jobs:
       - name: Clone Jaffle Shop
         run: git clone https://github.com/fishtown-analytics/jaffle_shop.git
 
-      - name: Run Tests
+      - name: Run Jaffle Shop
         env:
           DBT_PROFILES_DIR: /home/runner/work/tap-dbt-artifacts/tap-dbt-artifacts/tap_dbt_artifacts/tests
           CI_BIGQUERY_KEYFILE_TYPE: ${{ secrets.CI_BIGQUERY_KEYFILE_TYPE }}
@@ -58,4 +58,6 @@ jobs:
           dbt debug
           dbt seed
           dbt run
-          poetry run pytest
+
+      - name: Run Tests
+        run: poetry run pytest
