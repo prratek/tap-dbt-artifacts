@@ -57,6 +57,7 @@ jobs:
           cd jaffle_shop
           dbt debug
           dbt seed
+          dbt docs generate
           dbt run
 
       - name: Run Tests
