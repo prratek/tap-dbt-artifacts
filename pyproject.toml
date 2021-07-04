@@ -2,7 +2,7 @@
 name = "tap-dbt-artifacts"
 version = "0.0.1"
 description = "`tap-dbt-artifacts` is a Singer tap for dbt artifacts, built with the Meltano SDK for Singer Taps."
-authors = ["Prratek Ramchandani"]
+authors = ["Prratek Ramchandani <prratek.95@gmail.com>"]
 license = "Apache 2.0"
 
 [tool.poetry.dependencies]

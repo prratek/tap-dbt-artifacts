@@ -24,6 +24,7 @@ def test_standard_tap_tests():
         test()
 
 
+# Test that discovery returns streams for all 4 artifacts
 def test_discover_stream_output():
     tap: Tap = TapDbtArtifacts(config=SAMPLE_CONFIG, parse_env_config=True)
     streams = tap.discover_streams()
