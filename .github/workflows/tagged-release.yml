@@ -25,7 +25,6 @@ jobs:
         uses: JRubics/poetry-publish@v1.6
         with:
           pypi_token: ${{ secrets.PYPI_TOKEN }}
-          ignore_dev_requirements: true
 
       - name: Make GitHub Release
         uses: softprops/action-gh-release@v1
