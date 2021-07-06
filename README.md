@@ -1,4 +1,8 @@
 # tap-dbt-artifacts
+[![test](https://github.com/prratek/tap-dbt-artifacts/actions/workflows/test.yml/badge.svg)](https://github.com/prratek/tap-dbt-artifacts/actions/workflows/test.yml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PyPI Version](https://img.shields.io/pypi/v/tap-dbt-artifacts?style=flat)](https://pypi.org/project/tap-dbt-artifacts/)
+[![License](https://img.shields.io/pypi/l/tap-dbt-artifacts)](LICENSE.md)
 
 `tap-dbt-artifacts` is a Singer tap for dbtArtifacts.
 
