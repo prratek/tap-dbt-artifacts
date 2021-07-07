@@ -126,3 +126,9 @@ meltano elt tap-dbt-artifacts target-jsonl
 
 See the [dev guide](https://gitlab.com/meltano/singer-sdk/-/blob/main/docs/dev_guide.md) for more instructions on how 
 to use the SDK to develop your own taps and targets.
+
+### To Do
+
+1. Include meltano.yml file with project to simplify testing for local dev
+2. Support config option for dbt schema version
+3. Write tests to ensure top level keys for each stream are correct
